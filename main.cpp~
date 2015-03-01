@@ -1,0 +1,31 @@
+#include <iostream>
+#include "StackInterface.h"
+
+void printMenu();
+
+int main()
+{
+
+	printMenu();
+	Node<double> node;
+	node.setValue(5.4);
+	std::cout << node.getValue() << std::endl;
+
+	return 0;
+}
+
+void printMenu()
+{
+	std::cout << "\n\nSelect an action:\n";
+	std::cout << "1) Add something to stack 1\n";
+ 	std::cout << "2) Add something to stack 2\n";
+	std::cout << "3) See what is at the top of stack 1\n";
+	std::cout << "4) See what is at the top of stack 2\n";
+	std::cout << "5) Print contents in stack 1\n";
+	std::cout << "6) Print contents in stack 2\n";
+	std::cout << "7) Remove something from stack 1\n";
+	std::cout << "8) Remove something from stack 2\n";
+	std::cout << "9) Compare Stacks\n";
+	std::cout << "10) Quit\n";
+	std::cout << "Enter choice: ";
+}
