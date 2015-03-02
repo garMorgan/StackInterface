@@ -1,12 +1,12 @@
 #ifndef STACKINTERFACE_H
 #define STACKINTERFACE_H
 #include "PreconditionViolationException.h"
-#include "Node.h"
+//#include "Stack.h"
 template<typename T>
 class StackInterface
 {
 public:
-	virtual ~Stack() {};
+	virtual ~StackInterface() {};
 	virtual bool isEmpty() const = 0;
 	virtual void push(const T newEntry) = 0;
 	virtual T pop() throw(PreconditionViolationException) = 0;

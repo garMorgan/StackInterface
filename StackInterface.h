@@ -1,7 +1,6 @@
 #ifndef STACKINTERFACE_H
 #define STACKINTERFACE_H
 #include "PreconditionViolationException.h"
-#include "Node.h"
 template<typename T>
 class StackInterface
 {

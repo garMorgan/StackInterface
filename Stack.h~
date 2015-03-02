@@ -1,22 +1,32 @@
 #ifndef STACK_H
 #define STACK_H
+#include "Node.h"
+#include "PreconditionViolationException.h"
 #include "StackInterface.h"
+#include <string>
+#include <iostream>
+
 template <typename T>
-class Stack
+class Stack : public StackInterface<T>
 {
 public:
-	~Stack() {};
-	bool isEmpty() const = 0;
-	void push(const T newEntry) = 0;
-	T pop() throw(PreconditionViolationException) = 0;
-	T peek() const throw(PreconditionViolationException) = 0;
-	int size() const = 0;
-	void print() const = 0;
-	bool operator< (const StackInterface<T>& rhs) const = 0;
-	bool operator<= (const StackInterface<T>& rhs) const = 0;
-	bool operator> (const StackInterface<T>& rhs) const = 0;
-	bool operator>= (const StackInterface<T>& rhs) const = 0;
-	bool operator== (const StackInterface<T>& rhs) const = 0;
-	bool operator!= (const StackInterface<T>& rhs) const = 0;
+	Stack();
+	~Stack();
+	bool isEmpty() const;
+	void push(const T newEntry);
+	T pop() throw(PreconditionViolationException);
+	T peek() const throw(PreconditionViolationException);
+	int size() const;
+	void print() const;
+	bool operator< (const StackInterface<T>& rhs) const;
+	bool operator<= (const StackInterface<T>& rhs) const;
+	bool operator> (const StackInterface<T>& rhs) const;
+	bool operator>= (const StackInterface<T>& rhs) const;
+	bool operator== (const StackInterface<T>& rhs) const;
+	bool operator!= (const StackInterface<T>& rhs) const;
+private:
+	Node<T>* m_front;
+	int m_counter;
 };
+#include "Stack.hpp"
 #endif
