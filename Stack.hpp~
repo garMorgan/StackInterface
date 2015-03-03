@@ -7,7 +7,7 @@ Stack<T>::Stack()
 template<typename T>
 Stack<T>::~Stack()
 {
-	while(!isEmpty)
+	while(!isEmpty())
 		{
 		pop();
 		}
@@ -46,15 +46,18 @@ T Stack<T>::pop() throw(PreconditionViolationException)
 {
 	if(isEmpty())
 		{
-		throw(std::runtime_error("Pop attempted on an empty stack\n"));
+		throw(PreconditionViolationException("Exception: Pop attempted on an empty stack\n"));
 		}
 	else
 		{
 		Node<T>* temp;
+		T tempValue;
 		temp = m_front;
+		tempValue = m_front->getValue();
 		m_front = m_front->getNext();
 		m_counter--;
 		delete temp;
+		return tempValue;
 		}	
 }
 template<typename T>
@@ -62,7 +65,7 @@ T Stack<T>::peek() const throw(PreconditionViolationException)
 {
 	if(isEmpty())
 		{
-		throw(std::runtime_error("Peek attempted on an empty stack\n"));
+		throw(PreconditionViolationException("Exception: Peek attempted on an empty stack\n"));
 		}
 	else
 		{

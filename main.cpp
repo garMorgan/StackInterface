@@ -31,32 +31,65 @@ int main()
 			stack2->push(names);
 			std::cout << names << " successfully added to stack 2" << std::endl;
 			break;
+			case 3 :			
+			try
+				{
+				std::string temp = stack1->peek();
+				std::cout << temp << " is on the top of stack 1" << std::endl;
+				}
+			catch(std::runtime_error& e)
+				{
+				std::cout << e.what() << std::endl;
+				}
+			break;
+			case 4 :			
+			try
+				{
+				std::string temp = stack2->peek();
+				std::cout << temp << " is on the top of stack 2" << std::endl;
+				}
+			catch(std::runtime_error& e)
+				{
+				std::cout << e.what() << std::endl;
+				}
+			break;
 			case 5 : stack1->print();
 			break;
 			case 6 : stack2->print();
 			break;
-
+			case 7 :
+			try
+				{
+				std::string temp = stack1->pop();
+				std::cout << temp << " removed from stack 1" << std::endl; //name is in Stack.hpp
+				}
+			catch(std::runtime_error& e)
+				{
+				std::cout << e.what() << std::endl;
+				}
+			break;
+			case 8 :
+			try
+				{
+				std::string temp = stack2->pop();
+				std::cout << temp << " removed from stack 2" << std::endl; //name is in Stack.hpp
+				}
+			catch(std::runtime_error& e)
+				{
+				std::cout << e.what() << std::endl;
+				}
+			break;
 			case 9 : compareStacks(*stack1,*stack2);
 			break;
 			case 10 : std::cout << "Program ending..." << std::endl;
 			break;
 
-
 			default : std::cout << "Invalid Choice" << std::endl;
 			}
 		}while(number!=10);
 	
-
-
-
-	/*try
-		{
-		std::cout << stack1->peek() << std::endl;
-		}
-	catch(std::runtime_error& e)
-		{
-		std::cout << e.what() << std::endl;
-		}*/
+	delete stack1;
+	delete stack2;
 	
 	
 	return 0;
