@@ -1,3 +1,9 @@
+/**
+*	@file : Node.h
+*	@author :  Garion Morgan
+*	@date : 2015.3.4
+*	Purpose: Creating a node
+*/
 #ifndef	NODE_H
 #define	NODE_H
 

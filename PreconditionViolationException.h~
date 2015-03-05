@@ -1,3 +1,9 @@
+/**
+*	@file : PreconditionViolationException.h
+*	@author :  Garion Morgan
+*	@date : 2015.3.4
+*	Purpose: Creating an exception
+*/
 #ifndef PRECONDITIONVIOLATIONEXCEPTION_H
 #define PRECONDITIONVIOLATIONEXCEPTION_H
 

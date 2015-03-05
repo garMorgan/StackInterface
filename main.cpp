@@ -1,3 +1,9 @@
+/**
+*	@file : main.cpp
+*	@author :  Garion Morgan
+*	@date : 2015.3.4
+*	Purpose: Creating main to implement all the files created
+*/
 #include <iostream>
 #include "Stack.h"
 #include <string>
@@ -61,7 +67,7 @@ int main()
 			try
 				{
 				std::string temp = stack1->pop();
-				std::cout << temp << " removed from stack 1" << std::endl; //name is in Stack.hpp
+				std::cout << temp << " removed from stack 1" << std::endl; 
 				}
 			catch(std::runtime_error& e)
 				{
@@ -72,7 +78,7 @@ int main()
 			try
 				{
 				std::string temp = stack2->pop();
-				std::cout << temp << " removed from stack 2" << std::endl; //name is in Stack.hpp
+				std::cout << temp << " removed from stack 2" << std::endl;
 				}
 			catch(std::runtime_error& e)
 				{

@@ -1,3 +1,9 @@
+/**
+*	@file : Stack.hpp
+*	@author :  Garion Morgan
+*	@date : 2015.3.4
+*	Purpose: Creating a stack to either pop, push, peek, print, and compare.
+*/
 template<typename T>
 Stack<T>::Stack()
 {

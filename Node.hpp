@@ -1,3 +1,9 @@
+/**
+*	@file : Node.hpp
+*	@author :  Garion Morgan
+*	@date : 2015.3.4
+*	Purpose: Creating a Node
+*/
 template<typename T>
 Node<T>::Node()
 {

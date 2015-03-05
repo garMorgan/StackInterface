@@ -1,3 +1,9 @@
+/**
+*	@file : main.cpp
+*	@author :  Garion Morgan
+*	@date : 2015.3.4
+*	Purpose: Creating main to contain all the files created
+*/
 #include <iostream>
 #include "Stack.h"
 #include <string>
@@ -34,7 +40,6 @@ int main()
 			case 3 :			
 			try
 				{
-				stack1->peek();
 				std::string temp = stack1->peek();
 				std::cout << temp << " is on the top of stack 1" << std::endl;
 				}
@@ -46,7 +51,6 @@ int main()
 			case 4 :			
 			try
 				{
-				stack2->peek();
 				std::string temp = stack2->peek();
 				std::cout << temp << " is on the top of stack 2" << std::endl;
 				}
@@ -63,7 +67,7 @@ int main()
 			try
 				{
 				std::string temp = stack1->pop();
-				std::cout << temp << " removed from stack 1" << std::endl; //name is in Stack.hpp
+				std::cout << temp << " removed from stack 1" << std::endl; 
 				}
 			catch(std::runtime_error& e)
 				{
@@ -74,7 +78,7 @@ int main()
 			try
 				{
 				std::string temp = stack2->pop();
-				std::cout << temp << " removed from stack 2" << std::endl; //name is in Stack.hpp
+				std::cout << temp << " removed from stack 2" << std::endl;
 				}
 			catch(std::runtime_error& e)
 				{

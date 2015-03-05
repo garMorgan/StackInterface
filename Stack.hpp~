@@ -53,7 +53,7 @@ T Stack<T>::pop() throw(PreconditionViolationException)
 		Node<T>* temp;
 		T tempValue;
 		temp = m_front;
-		tempValue = m_front->getValue();
+		tempValue = temp->getValue();
 		m_front = m_front->getNext();
 		m_counter--;
 		delete temp;
